@@ -13,3 +13,5 @@ yarn build
 ```
 
 to bundle your application
+rewrite the code with vuejs
+i think vue is perfect for me and my device!

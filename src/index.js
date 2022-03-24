@@ -8,7 +8,7 @@ import {
 import {BaseElement} from './style.js';
 
 //import components
-import './components/navbar.js';
+import'./components/navbar.js';
 
 export class App extends BaseElement {  
     // static styles = unsafeCSS(classless, themes); 

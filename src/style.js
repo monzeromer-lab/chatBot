@@ -5,18 +5,11 @@ import {
     LitElement
 } from 'lit';
 // import css files
-import classless from './classless.css';
-import themes from './themes.css';
+import bootstrap from '../assets/css/bootstrap.css';
+import '../assets/js/bootstrap.bundle.min.js';
 
-
-
-// const classlessTheme = css `
-// ${themes}
-// `;
-class Theme extends LitElement{
-    static styles = unsafeCSS(classless);
-}
-export class BaseElement extends Theme{
-    static styles = unsafeCSS(themes);
+// base element which will add the style to the shadoow root
+export class BaseElement extends LitElement{
+    static styles = unsafeCSS(bootstrap);
     
   }
