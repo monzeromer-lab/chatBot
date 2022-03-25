@@ -1,59 +1,13 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>Chatbot</title>
-
-</head>
-
-<body>
-    <my-app></my-app>
-</body>
-
-<script>
-    // the next lines for thee dark theme add the next attribute to enable it
-    // onchange="switchTheme(this)"
-    // TODO: store the current state in the local storage
-    function switchTheme(el) {
-        document.documentElement.setAttribute('data-theme', el.value)
-    }
-
-    function switchCSS(cssid, el) {
-        document.getElementById(cssid).href = el.value;
-    }
-
-    function addFontSize(addPx) {
-        html = document.querySelector('html');
-        currentSize = parseFloat(window.getComputedStyle(html, null)
-            .getPropertyValue('font-size'));
-        html.style.fontSize = (currentSize + addPx) + 'px';
-    }
-
-    function toggleDarkMode(el) {
-        var theme = 'light'
-        if (el.innerText == '☪') {
-            el.innerText = '☀';
-            theme = 'dark';
-        } else {
-            el.innerText = '☪';
-        }
-        document.documentElement.setAttribute('data-theme', theme)
-    }
-</script>
-<script>
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker
-                .register("service-worker.js")
-                .then((registration) => {
-                    console.log("Service Worker registered: ", registration);
-                })
-                .catch((registrationError) => {
-                    console.error("Service Worker registration failed: ", registrationError);
-                });
-        });
-    }
-</script>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
